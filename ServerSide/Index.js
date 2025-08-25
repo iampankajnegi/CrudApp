@@ -4,11 +4,12 @@ import ConnectionDB from "./libs/DB.js";
 import AuthRouter from "./Routers/Auth.js"
 import ProductRouter from "./Routers/Product.js"
 import dotenv from "dotenv"
+import cors from "cors"
 
 
 dotenv.config();
 
-
+app.use(cors("*"))
 
 const app = express();
 

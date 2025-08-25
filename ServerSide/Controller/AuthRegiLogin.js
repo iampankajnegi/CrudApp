@@ -59,6 +59,8 @@ const Login = async (req, res)=>{
             
         }  
 
+        const token = userFind.generateAuthToken();
+
         return res.status(200).json({success:true, message:"Login successfull", user:userFind}) 
     }
     catch(error){
